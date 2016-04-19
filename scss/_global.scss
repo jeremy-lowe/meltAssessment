@@ -1,0 +1,56 @@
+/* global */
+	body {
+		font: {
+			family: $font-base;
+			weight:400;
+			size: 20px;
+		}
+		line-height: 1.7;
+		text-align: center;
+		background:#fff;
+		color: $grey-dark;
+		// don't forget to remove
+			@include mediaQ(small) {
+				background:pink;
+			}
+			@include mediaQ(medium) {
+				background: coral;
+			}
+			@include mediaQ(large) {
+				background: red;
+			}
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		font: {
+			family: $font-special;
+			weight:300;
+		}
+		color: $grey-dark;
+	}
+	h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {font-weight: 700;}
+	h2 {font-size:44px;}
+	h3 {font-size:31px;}
+	
+	header, footer, section {
+		outline:1px dotted green;
+		width:100%;
+	}
+	
+	.sectInner {
+		outline: 1px solid blue; overflow:hidden;
+		margin: 2em auto;
+		padding: 2em 0;
+		width:90%;
+		@extend %clearfix; // ............. you don't actually need this
+		@include mediaQ(small) {
+			width:80%;
+		}
+		@include mediaQ(medium) {
+			width:70%;
+		}
+		@include mediaQ(large) {
+			width:60%;
+		}
+	}
+

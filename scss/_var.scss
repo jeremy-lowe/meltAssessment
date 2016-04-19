@@ -1,0 +1,53 @@
+// colors
+	$meltBlue: #89b8ea;
+	$grey-dark: #666; // #2f3033 - that from psd file, but WAY dark in browser
+	$grey-light: #8b8b8b;
+	// note - grey's on website are different than in the photoshop file
+
+// fonts
+	$font-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	$font-special: "adelle", "adelle PE", "adelleBasic", Times, serif;
+
+/// Break Points
+	$break-small: 768px;
+	$break-tiny: $break-small - 1;
+	$break-medium: 1024px;
+	$break-large: 1300px;
+	
+	@mixin mediaQ($size, $min:null, $max:null) {
+		@if $size == tiny {
+			@media only screen and (max-width: $break-tiny) { @content; }
+		}
+		@else if $size == small {
+			@media only screen and (min-width: $break-small) { @content; }
+		}
+		@else if $size == medium {
+			@media only screen and (min-width: $break-medium) { @content; }
+		}
+		@else if $size == large {
+			@media only screen and (min-width: $break-large) { @content; }
+		}
+		// this would be used like this...
+		// @include mediaQ(special, 500px, 600px) { .... stuff..... }
+		@else if $size == special {
+			@if $min != null and $max == null {
+				@media only screen and (min-width: $min) { @content; }
+			}
+			@else if $min == null and $max != null {
+				@media only screen and (max-width: $max) { @content; }
+			}
+			@else if $min != null and $max != null {
+				@media only screen and (min-width: $min) and (max-width: $max) { @content; }
+			}
+		}
+	}
+	
+// clear fix mixin - http://blog.teamtreehouse.com/a-better-clearfix-with-sass 
+// use like this: @extend %clearfix 
+	%clearfix {
+	  &:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	  }
+	}

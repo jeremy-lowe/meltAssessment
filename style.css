@@ -1,0 +1,160 @@
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 | License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.sectInner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* global */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.7;
+  text-align: center;
+  background: #fff;
+  color: #666;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background: pink;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    background: coral;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  body {
+    background: red;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "adelle", "adelle PE", "adelleBasic", Times, serif;
+  font-weight: 300;
+  color: #666;
+}
+
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 31px;
+}
+
+header, footer, section {
+  outline: 1px dotted green;
+  width: 100%;
+}
+
+.sectInner {
+  outline: 1px solid blue;
+  overflow: hidden;
+  margin: 2em auto;
+  padding: 2em 0;
+  width: 90%;
+}
+@media only screen and (min-width: 768px) {
+  .sectInner {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .sectInner {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .sectInner {
+    width: 60%;
+  }
+}
+
+/* header */
+.brand {
+  display: block;
+}
+
+#meltLogo {
+  fill: pink;
+  max-width: 100px;
+  display: inline-block;
+}
+
+.brand:hover #meltLogo {
+  fill: lightblue;
+}
+
+.brand h1 {
+  display: none;
+}
+
+.brand:hover h1 {
+  display: inline-block;
+}
+
+/* footer */
+/* hero */
+/* what we do */
+/* call for superheros */
+/* video */
+.embedWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.embedWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* get in touch */
+/* contact us */

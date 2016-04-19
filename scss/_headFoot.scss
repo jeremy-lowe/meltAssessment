@@ -1,0 +1,22 @@
+
+/* header */
+	.brand {
+		display:block;
+	}
+	#meltLogo {
+		fill: pink;
+		max-width:100px;
+		display:inline-block;
+	}
+	.brand:hover #meltLogo {
+		fill: lightblue;
+	}
+	.brand h1 {
+		display:none;
+	}
+	.brand:hover h1 {
+		display:inline-block;
+	}
+	
+	
+/* footer */
