@@ -45,6 +45,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
+  font-margin: 0;
+  font-padding: 0;
   line-height: 1.7;
   text-align: center;
   background: #fff;
@@ -62,8 +64,16 @@ body {
 }
 @media only screen and (min-width: 1300px) {
   body {
-    background: red;
+    background: orange;
   }
+}
+
+a {
+  color: #89b8ea;
+}
+
+a:hover, a:visited {
+  color: #999;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -85,58 +95,157 @@ h3 {
 }
 
 header, footer, section {
-  outline: 1px dotted green;
   width: 100%;
 }
 
 .sectInner {
-  outline: 1px solid blue;
-  overflow: hidden;
-  margin: 2em auto;
-  padding: 2em 0;
-  width: 90%;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  width: 95%;
 }
 @media only screen and (min-width: 768px) {
   .sectInner {
-    width: 80%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .sectInner {
-    width: 70%;
+    width: 90%;
+    outline: 1px solid green;
   }
 }
 @media only screen and (min-width: 1300px) {
   .sectInner {
-    width: 60%;
+    max-width: 1200px;
   }
 }
 
 /* header */
+header {
+  background: #eee;
+  border-bottom: 1px solid #999;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    position: absolute;
+    top: 0;
+    background: rgba(255, 0, 0, 0.5);
+    border-bottom: none;
+  }
+  header .sectInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .brand {
   display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
 }
-
-#meltLogo {
-  fill: pink;
-  max-width: 100px;
-  display: inline-block;
+.brand #meltLogo {
+  width: 100%;
+  height: 100%;
+  fill: #89b8ea;
 }
-
-.brand:hover #meltLogo {
-  fill: lightblue;
-}
-
 .brand h1 {
   display: none;
 }
+@media only screen and (min-width: 768px) {
+  .brand {
+    width: auto;
+    margin: 0 auto 0 0;
+    align-self: flex-start;
+  }
+  .brand #meltLogo {
+    width: auto;
+    fill: #fff;
+    vertical-align: middle;
+    transition: all 0.3s ease-out;
+  }
+  .brand:hover #meltLogo {
+    fill: #89b8ea;
+  }
+  .brand h1 {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: left;
+    color: #89b8ea;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+  .brand:hover h1 {
+    opacity: 1;
+    width: 120px;
+  }
+}
 
-.brand:hover h1 {
-  display: inline-block;
+.mainNav ul {
+  display: table;
+  width: 100%;
+  max-width: 450px;
+  margin: 10px auto 0 auto;
+}
+.mainNav li {
+  display: table-cell;
+}
+.mainNav a {
+  color: #999;
+  text-decoration: none;
+  font-family: "adelle", "adelle PE", "adelleBasic", Times, serif;
+  font-size: 12px;
+  transition: all 0.3s ease-out;
+}
+.mainNav a:hover {
+  color: #89b8ea;
+}
+.mainNav a.current {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #89b8ea;
+}
+@media only screen and (min-width: 768px) {
+  .mainNav ul {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto 0 auto;
+  }
+  .mainNav li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .mainNav li:last-of-type {
+    margin: 0 0 0 10px;
+  }
+  .mainNav a {
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .mainNav a.current {
+    border-bottom: 2px solid #666;
+  }
 }
 
 /* footer */
+footer {
+  background: #89b8ea;
+  font-family: "adelle", "adelle PE", "adelleBasic", Times, serif;
+  font-size: 16px;
+  font-weight: 100;
+  color: #fff;
+  padding: 2em;
+}
+footer b {
+  font-weight: 600;
+}
+
 /* hero */
+.hero {
+  margin-top: 5em;
+}
+
 /* what we do */
 /* call for superheros */
 /* video */

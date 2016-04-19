@@ -1,22 +1,116 @@
 
 /* header */
+	header {
+		background:$grey-light;
+		border-bottom:1px solid $grey;
+		@include mediaQ(small) {
+			position:absolute;
+			top:0;
+			background:rgba(255,0,0,0.5);
+			border-bottom:none;
+			& .sectInner {
+				display:flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
 	.brand {
 		display:block;
+		margin:0 auto;
+		width:40px; height:40px;
+		text-decoration: none;
+		#meltLogo {
+			width:100%; height:100%;
+			fill: $meltBlue;
+		}
+		h1 {
+			display:none;
+		}
+		@include mediaQ(small) {
+			width:auto;	
+			margin:0 auto 0 0; 
+			align-self: flex-start;
+			& #meltLogo {
+				width:auto;
+				fill:$white;
+				vertical-align: middle;
+				transition: all 0.3s ease-out;
+			}
+			&:hover #meltLogo {
+				fill:$meltBlue;
+			}
+			h1 {
+				display:inline-block;
+				height:40px; line-height: 40px;
+				width:0; overflow: hidden;
+				vertical-align: middle;
+				text-align: left;
+				color:$meltBlue;
+				opacity:0;
+				transition: all 0.5s ease-out;
+							}
+			&:hover h1 {
+				opacity:1;
+				width:120px;
+			}
+		}
 	}
-	#meltLogo {
-		fill: pink;
-		max-width:100px;
-		display:inline-block;
-	}
-	.brand:hover #meltLogo {
-		fill: lightblue;
-	}
-	.brand h1 {
-		display:none;
-	}
-	.brand:hover h1 {
-		display:inline-block;
+	.mainNav {
+		ul {
+			display:table;
+			width:100%; max-width: 450px;
+			margin:10px auto 0 auto;
+		}
+		li {
+			display:table-cell;
+		}
+		a {
+			color:$grey;
+			text-decoration: none;
+			font-family: $font-special;
+			font-size: 12px;
+			transition: all 0.3s ease-out;
+			&:hover {
+				color:$meltBlue;
+			}
+			&.current {
+				padding-bottom:3px;
+				border-bottom:1px solid $meltBlue;
+			}
+		}
+		@include mediaQ(small) {
+			& ul {
+				display:block;
+				max-width: 600px;
+				margin:0 auto 0 auto;
+			}
+			& li {
+				display: inline-block;
+				margin:0 10px;
+				&:last-of-type {margin:0 0 0 10px;}
+			}
+			& a {
+				font-size:13px;
+				color:$white;
+				text-transform: uppercase;
+				&.current {
+					border-bottom:2px solid $grey-dark;
+				}
+			}
+		}
 	}
 	
 	
 /* footer */
+	footer {
+		background: $meltBlue;
+		font-family: $font-special;
+		font-size: 16px;
+		font-weight: 100;
+		color:$white;
+		padding:2em;
+		b {
+			font-weight: 600; // why would i have to do that?
+		}
+	}

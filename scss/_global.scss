@@ -4,6 +4,7 @@
 			family: $font-base;
 			weight:400;
 			size: 20px;
+			margin:0; padding:0;
 		}
 		line-height: 1.7;
 		text-align: center;
@@ -17,9 +18,13 @@
 				background: coral;
 			}
 			@include mediaQ(large) {
-				background: red;
+				background: orange;
 			}
 	}
+	
+	// default link styles
+	a {color:$meltBlue;}
+	a:hover, a:visited {color:$grey;}
 	
 	h1, h2, h3, h4, h5, h6 {
 		font: {
@@ -33,24 +38,26 @@
 	h3 {font-size:31px;}
 	
 	header, footer, section {
-		outline:1px dotted green;
 		width:100%;
 	}
 	
 	.sectInner {
-		outline: 1px solid blue; overflow:hidden;
-		margin: 2em auto;
-		padding: 2em 0;
-		width:90%;
+		margin: 0 auto;
+		padding: 0.5em 0;
+		width:95%;
 		@extend %clearfix; // ............. you don't actually need this
 		@include mediaQ(small) {
-			width:80%;
+			width:90%;
+			//max-width: 960px;
+			outline:1px solid green;
 		}
 		@include mediaQ(medium) {
-			width:70%;
+			//width:85%;
+			//max-width: 1000px;
 		}
 		@include mediaQ(large) {
-			width:60%;
+			//width:80%;
+			max-width: 1200px;
 		}
 	}
 

@@ -23,24 +23,14 @@ other
 - also don't forget to clean up comments in scss files
 - how much can you play with the way codekit exports/formats stuff?
 	(a little..... don't like that it expands the reset)
+- maybe watch your font sizes.... don't eyeball so much as get them off the psd file
 	
 - git
-	- ok some random change to see how this shows up.....
-	- this is just messed the f*ck up....
-		- getKracken "sees" the changes i make and allows me to commit
-			- BUT - i can't figure out how to connect to github
-		- github desktop allows me to connect and publish/push to github
-			- BUT - it doesn't see changes to files and thus i can't make commits...
-			- wait.... that it is... its just really slow....
-			jesus christ
-	- ok, from the github website you can upload files.... 
-		- can like drag a folder
-		- but it doesn't seem to like lots of files
-		- and then you can treat that as a commit...
-		- or.... there's how gitkraken actually seems aware of my changes.... could use that locally and just upload the stuff via the website
-	- yet another possible option....
-		- github desktop seems to only "understand" changes... well, from the dektop.... not from dropbox....
-		- so have a folder in that git folder and just copy files over there?
+	- this seems to have been fixed.... not sure what/how...
+		a? project files need to sit in the directory defined in preferences > general
+		b? set up the project on github first (with readme.md), 
+			- clone it into getkracken (under file menu or use that "very obvious" folder icon)
+			- add files into the folder that gets created on your hard drive
  -->
 		
 		
@@ -48,32 +38,24 @@ other
 	<body>
 		
 		
-<!--
-	nead/nav
-	- responsive menu? or how they have main site?
-	(i say start at basic and look at your time)
-	- am i ok with set up for the logo? 
-	(probably wrap it in .brand)
-	- flexbox/float?
--->
 		<header>
 		<div class="sectInner">
 			
-<a href="/" class="brand">
-<svg id="meltLogo" viewBox="0 0 60 60">
-	<path d="M30,0A30,30,0,1,0,60,30,30,30,0,0,0,30,0ZM18.58,29.41a7.6,7.6,0,0,0,.48,2.7,8,8,0,0,1,.35,2.83,7.25,7.25,0,0,1-6,6.62,7.18,7.18,0,0,1-8-4.35,7.66,7.66,0,0,1-.13-5.31,7.23,7.23,0,0,1,4.92-4.57,15.29,15.29,0,0,0,2.44-.7,3.2,3.2,0,0,0,1.87-3,7.17,7.17,0,0,0-.48-2,10.08,10.08,0,0,1-.39-2,7.25,7.25,0,0,1,.83-4,7.13,7.13,0,0,1,6.05-3.79,7.3,7.3,0,0,1,5.05,1.65A7,7,0,0,1,28,17.75a7.23,7.23,0,0,1-4.66,8.32,30.56,30.56,0,0,0-3,.78A3.15,3.15,0,0,0,18.58,29.41Zm17.85,0a7.62,7.62,0,0,0,.48,2.7,8,8,0,0,1,.35,2.83,7.31,7.31,0,0,1-14,2.26,7.68,7.68,0,0,1-.13-5.31A7.23,7.23,0,0,1,28,27.32a15.36,15.36,0,0,0,2.44-.7,3.2,3.2,0,0,0,1.87-3,7.18,7.18,0,0,0-.48-2,10,10,0,0,1-.39-2,7.26,7.26,0,0,1,.83-4,7.43,7.43,0,0,1,2.31-2.57,7.54,7.54,0,0,1,3.75-1.22,7.3,7.3,0,0,1,5.05,1.65,7,7,0,0,1,2.48,4.18,7.23,7.23,0,0,1-4.66,8.32,30.29,30.29,0,0,0-3,.78A3.15,3.15,0,0,0,36.43,29.41Zm8.75,11.8a7.34,7.34,0,1,1,9.14-10.28,7.53,7.53,0,0,1,.74,4.62A7.36,7.36,0,0,1,45.18,41.21Z" transform="translate(0 0)"/>
-</svg>
-<h1>meltmedia</h1>
-</a>
+			<a href="https://goo.gl/6GTq58" class="brand">
+				<svg id="meltLogo" viewBox="0 0 60 60">
+					<path d="M30,0A30,30,0,1,0,60,30,30,30,0,0,0,30,0ZM18.58,29.41a7.6,7.6,0,0,0,.48,2.7,8,8,0,0,1,.35,2.83,7.25,7.25,0,0,1-6,6.62,7.18,7.18,0,0,1-8-4.35,7.66,7.66,0,0,1-.13-5.31,7.23,7.23,0,0,1,4.92-4.57,15.29,15.29,0,0,0,2.44-.7,3.2,3.2,0,0,0,1.87-3,7.17,7.17,0,0,0-.48-2,10.08,10.08,0,0,1-.39-2,7.25,7.25,0,0,1,.83-4,7.13,7.13,0,0,1,6.05-3.79,7.3,7.3,0,0,1,5.05,1.65A7,7,0,0,1,28,17.75a7.23,7.23,0,0,1-4.66,8.32,30.56,30.56,0,0,0-3,.78A3.15,3.15,0,0,0,18.58,29.41Zm17.85,0a7.62,7.62,0,0,0,.48,2.7,8,8,0,0,1,.35,2.83,7.31,7.31,0,0,1-14,2.26,7.68,7.68,0,0,1-.13-5.31A7.23,7.23,0,0,1,28,27.32a15.36,15.36,0,0,0,2.44-.7,3.2,3.2,0,0,0,1.87-3,7.18,7.18,0,0,0-.48-2,10,10,0,0,1-.39-2,7.26,7.26,0,0,1,.83-4,7.43,7.43,0,0,1,2.31-2.57,7.54,7.54,0,0,1,3.75-1.22,7.3,7.3,0,0,1,5.05,1.65,7,7,0,0,1,2.48,4.18,7.23,7.23,0,0,1-4.66,8.32,30.29,30.29,0,0,0-3,.78A3.15,3.15,0,0,0,36.43,29.41Zm8.75,11.8a7.34,7.34,0,1,1,9.14-10.28,7.53,7.53,0,0,1,.74,4.62A7.36,7.36,0,0,1,45.18,41.21Z" transform="translate(0 0)"/>
+				</svg>
+				<h1>melt<em>media</em></h1>
+			</a>
 			
-			<nav>
+			<nav class="mainNav">
 				<ul>
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">WORK</a></li>
-					<li><a href="#">CULTURE</a></li>
-					<li><a href="#">LABS</a></li>
-					<li><a href="#">THOUGHTS</a></li>
-					<li><a href="#">CONTACT</a></li>
+					<li><a href="https://goo.gl/6GTq58" class="current">Home</a></li>
+					<li><a href="https://goo.gl/6GTq58">Work</a></li>
+					<li><a href="https://goo.gl/6GTq58">Culture</a></li>
+					<li><a href="https://goo.gl/6GTq58">Labs</a></li>
+					<li><a href="https://goo.gl/6GTq58">Thoughts</a></li>
+					<li><a href="https://goo.gl/6GTq58">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -104,7 +86,7 @@ other
 					We're meltmedia and we're on a mission. Quite simply, it's to make our clients' lives easier. We create an environment where business, technology, and design experts join forces to deliver innovative and sustainable digital solutions. And we have plenty of geeky fun along the way.
 				</p>
 				
-				<button>See Our Work</button>
+				<a href=https://goo.gl/6GTq58>See Our Work</a>
 				 
 				<img src="img/workSamplesTest.png" alt="Work Samples">
 				
@@ -141,7 +123,7 @@ other
 
 				<h2>Call for <em>Superheroes</em></h2>
 				
-				<button>See Our Openings</button>
+				<a href=https://goo.gl/6GTq58>See Our Openings</a>
 
 			</div>
 			</section>
@@ -235,15 +217,10 @@ other
 			
 		</main>
 
-<!--
-	footer
-	- pretty straight forward
-	- as is in the break out? or closer to their live site? (would repeat info from above)
-	- that javascript date thing?
--->		
+		
 		<footer>
 		<div class="sectInner">
-			meltmedia &copy; copyright 2014 - Interactive Superheroes
+			meltmedia &copy; copyright 2014 - Interactive <b>Superheroes</b>
 		</div>
 		</footer>
 	</body>
