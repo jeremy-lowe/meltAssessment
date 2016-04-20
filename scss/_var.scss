@@ -44,7 +44,7 @@
 	}
 	
 // clear fix mixin - http://blog.teamtreehouse.com/a-better-clearfix-with-sass 
-// use like this: @extend %clearfix ...
+// use like this: @extend %clearfix
 	%clearfix {
 	  &:after {
 	    content: "";

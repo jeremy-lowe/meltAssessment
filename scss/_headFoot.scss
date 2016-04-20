@@ -20,6 +20,7 @@
 	.brand {
 		display:block;
 		margin:0 auto;
+		padding:0.5em 0 0 0;
 		width:40px; height:40px;
 		text-decoration: none;
 		#meltLogo {
@@ -32,6 +33,7 @@
 		@include mediaQ(small) {
 			width:auto;	
 			margin:0 auto 0 0; 
+			padding:0;
 			align-self: flex-start;
 			& #meltLogo {
 				width:auto;
@@ -40,7 +42,7 @@
 				transition: all 0.2s ease-out;
 			}
 			&:hover #meltLogo {
-				fill: adjust-color($meltBlue, $saturation: -5%, $lightness: 15% );
+				fill:#ddd;
 			}
 			h1 {
 				display:inline-block;
@@ -56,12 +58,11 @@
 				transition: all 0.4s ease-out;
 				font-weight: 300;
 				b {
-					font-weight: 400;
-					font-style: italic;
+					font-weight: bold;
 				}
 			}
 			&:hover h1 {
-				color: adjust-color($meltBlue, $saturation: 5%, $lightness: 20% );
+				color:#ddd;
 				opacity:1;
 				width:125px;
 			}
@@ -71,7 +72,7 @@
 		ul {
 			display:table;
 			width:100%; max-width: 450px;
-			margin:10px auto 0 auto;
+			margin:1em auto;
 		}
 		li {
 			display:table-cell;
@@ -83,7 +84,7 @@
 			font-size: 12px;
 			transition: all 0.2s ease-out;
 			&:hover {
-				color: adjust-color($meltBlue, $saturation: 5%, $lightness: 15% );
+				color:#ddd;
 			}
 			&.current {
 				padding-bottom:3px;
@@ -98,17 +99,28 @@
 			}
 			& li {
 				display: inline-block;
-				margin:0 15px;
-				&:last-of-type {margin:0 0 0 15px;}
+				margin:0 12px;
+				&:last-of-type {margin:0 0 0 12px;}
 			}
 			& a {
-				font-size:13px;
+				font-size:14px;
 				color:$white;
 				text-transform: uppercase;
+				text-shadow:-1px 1px 1px fade-out($grey-dark,0.4);
 				&.current {
 					border-bottom:2px solid $grey-dark;
 				}
 			}
+		}
+		@include mediaQ(medium) {
+			& li {
+				margin:0 14px;
+				&:last-of-type {margin:0 0 0 14px;}
+			}
+			& a {
+				font-size:16px;
+			}
+			
 		}
 	}
 	

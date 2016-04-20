@@ -3,13 +3,14 @@
 	.hero {
 		position:relative;
 		overflow: hidden;
+		padding:2em 0;
 		color:$white;
-		text-shadow:-1px 1px 1px $grey-dark;
+		text-shadow:-1px 1px 1px fade-out($grey-dark,0.4);
 		&:before {
 			content:'';
 			background: {
 				color:$meltBlue;
-				image: url(/img/bgHero-sm.jpg);
+				image: url(img/bgHero-sm.jpg);
 				position: center center;
 				repeat: no-repeat;
 				attachment: fixed;
@@ -37,19 +38,16 @@
 			}
 		}
 		@include mediaQ(small) {
-			padding:6em 0 1em 0;
+			padding:6em 0 2em 0;
 			background: {
 				color:$meltBlue;
-				image: url(/img/bgHero.jpg);
+				image: url(img/bgHero.jpg);
 				position: center center;
 				repeat: no-repeat;
-				//attachment: fixed;
 				size: cover;
 			}
 			&:before {
 				background: none;
-				//background-image: url(/img/bgHero.jpg);
-				//height: 100vh;
 			}
 			.sectInner {
 				display:flex;
@@ -61,13 +59,11 @@
 				width:40%;
 				max-width: 300px;
 				margin: 0 0 0 3%;
-				//outline:1px solid yellow;
 			}
 			.blurb {
 				width:50%;
 				max-width: 375px;
 				margin: 0 3% 0 0;
-				//outline:1px solid red;
 			}
 			& h2, & p {
 				text-align: left;
@@ -86,6 +82,7 @@
 /* WHAT WE DO */
 	.whatWeDo {
 		background:#fff;
+		padding:2em 0;
 		.sectInner {
 			width:80%;
 			max-width: 600px;
@@ -105,13 +102,12 @@
 	.careers {
 		background: {
 			color:$meltBlue;
-			image: url(/img/bgCareers-sm.jpg);
+			image: url(img/bgCareers-sm.jpg);
 			position: center center;
 			repeat: no-repeat;
-			//attachment: fixed;
 			size: cover;
 		}
-		text-shadow:-1px 1px 1px $grey-dark;
+		text-shadow:-1px 1px 1px fade-out($grey-dark,0.4);
 		.sectInner {
 			padding:2em 0;
 		}
@@ -119,7 +115,7 @@
 			color:$white;
 		}
 		@include mediaQ(small) {
-			backround-image: url(/img/bgCareers.jpg);
+			background-image: url(img/bgCareers.jpg);
 		}
 	}
 
@@ -169,9 +165,6 @@
 			color:$white;
 			margin:2em auto;
 			text-align: left;
-			div {
-				//outline:1px solid yellow;
-			}
 			b {
 				font-size: 1.1em;
 				font-weight: 600;
@@ -203,13 +196,14 @@
 					opacity:0.8;
 				}
 			}
-			.socMedia-fb {background-image:url(/img/icon-facebook.svg); margin:0 -6px;}
-			.socMedia-twit {background-image:url(/img/icon-twitter.svg);}
-			.socMedia-linkd {background-image:url(/img/icon-linkedin.svg);}
-			.socMedia-insta {background-image:url(/img/icon-instagram.svg);}
+			.socMedia-fb {background-image:url(img/icon-facebook.svg); margin:0 -6px;}
+			.socMedia-twit {background-image:url(img/icon-twitter.svg);}
+			.socMedia-linkd {background-image:url(img/icon-linkedin.svg);}
+			.socMedia-insta {background-image:url(img/icon-instagram.svg);}
 		}
 
-		@include mediaQ(small) {
+		@include mediaQ(special, 640px) {
+			background: $white;
 			position: relative;
 			flex-direction: row;
 			.map {
@@ -230,6 +224,7 @@
 					background:fade-out($meltBlue, 0.15);
 					padding:0.5em 2em;
 					box-shadow: -2px 2px 5px fade-out($grey-dark,0.4);
+					text-shadow: -1px 1px 1px fade-out($grey-dark,0.4);
 				}
 			}
 		}
