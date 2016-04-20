@@ -5,6 +5,9 @@
 		
 		<title>meltmedia.com | Digital Interactive Superheroes unite!</title>
 		
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="shortcut icon" href="images/favicon.png" />
+		
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
 		
 		<script src="https://use.typekit.net/tph7gju.js"></script>
@@ -24,6 +27,8 @@ other
 - how much can you play with the way codekit exports/formats stuff?
 	(a little..... don't like that it expands the reset)
 - maybe watch your font sizes.... don't eyeball so much as get them off the psd file
+- probably wise to validate code too
+- note they put titles on all their links
 	
 - git
 	- this seems to have been fixed.... not sure what/how...
@@ -32,7 +37,10 @@ other
 			- clone it into getkracken (under file menu or use that "very obvious" folder icon)
 			- add files into the folder that gets created on your hard drive
  -->
-		
+
+ 	<!--[if lt IE 9]>
+    	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->		
 		
 	</head>
 	<body>
@@ -45,7 +53,7 @@ other
 				<svg id="meltLogo" viewBox="0 0 60 60">
 					<path d="M30,0A30,30,0,1,0,60,30,30,30,0,0,0,30,0ZM18.58,29.41a7.6,7.6,0,0,0,.48,2.7,8,8,0,0,1,.35,2.83,7.25,7.25,0,0,1-6,6.62,7.18,7.18,0,0,1-8-4.35,7.66,7.66,0,0,1-.13-5.31,7.23,7.23,0,0,1,4.92-4.57,15.29,15.29,0,0,0,2.44-.7,3.2,3.2,0,0,0,1.87-3,7.17,7.17,0,0,0-.48-2,10.08,10.08,0,0,1-.39-2,7.25,7.25,0,0,1,.83-4,7.13,7.13,0,0,1,6.05-3.79,7.3,7.3,0,0,1,5.05,1.65A7,7,0,0,1,28,17.75a7.23,7.23,0,0,1-4.66,8.32,30.56,30.56,0,0,0-3,.78A3.15,3.15,0,0,0,18.58,29.41Zm17.85,0a7.62,7.62,0,0,0,.48,2.7,8,8,0,0,1,.35,2.83,7.31,7.31,0,0,1-14,2.26,7.68,7.68,0,0,1-.13-5.31A7.23,7.23,0,0,1,28,27.32a15.36,15.36,0,0,0,2.44-.7,3.2,3.2,0,0,0,1.87-3,7.18,7.18,0,0,0-.48-2,10,10,0,0,1-.39-2,7.26,7.26,0,0,1,.83-4,7.43,7.43,0,0,1,2.31-2.57,7.54,7.54,0,0,1,3.75-1.22,7.3,7.3,0,0,1,5.05,1.65,7,7,0,0,1,2.48,4.18,7.23,7.23,0,0,1-4.66,8.32,30.29,30.29,0,0,0-3,.78A3.15,3.15,0,0,0,36.43,29.41Zm8.75,11.8a7.34,7.34,0,1,1,9.14-10.28,7.53,7.53,0,0,1,.74,4.62A7.36,7.36,0,0,1,45.18,41.21Z" transform="translate(0 0)"/>
 				</svg>
-				<h1>melt<em>media</em></h1>
+				<h1>melt<b>media</b></h1>
 			</a>
 			
 			<nav class="mainNav">
@@ -64,41 +72,27 @@ other
 		<main>
 			
 			
-<!--
-	hero
-	- tricky part here is the bg image
-		- how will it "cover" on small screens when content gets real long
-		- also at larger sizes its underneath the header menu
-		(probably giving the header an absolute position will take care of that)
-	- order of text/image?
-	- will need to wrap text in something like .heroText
-	(should the image get wrapped in something?)
-	- flexbox/float?
-	- also treatment of the "buttons" i'll have to watch.... use a mixin...
-	(simplest styling solution would to just use an <a> on the form)
--->
 			<section class="hero">
 			<div class="sectInner">
 				
-				<h2>Heroic websites and apps <em>for all viewports.</em></h2>
+				<div class="figure">
+					<img src="img/workSamples.png" alt="Work Samples">
+				</div>
 				
-				<p>
-					We're meltmedia and we're on a mission. Quite simply, it's to make our clients' lives easier. We create an environment where business, technology, and design experts join forces to deliver innovative and sustainable digital solutions. And we have plenty of geeky fun along the way.
-				</p>
-				
-				<a href=https://goo.gl/6GTq58>See Our Work</a>
-				 
-				<img src="img/workSamplesTest.png" alt="Work Samples">
+				<div class="blurb">
+					<h2>Heroic websites and apps <em>for all viewports.</em></h2>
+					
+					<p>
+						We're meltmedia and we're on a mission. Quite simply, it's to make our clients' lives easier. We create an environment where business, technology, and design experts join forces to deliver innovative and sustainable digital solutions. And we have plenty of geeky fun along the way.
+					</p>
+					
+					<a href=https://goo.gl/6GTq58 class="button">See Our Work</a>
+				</div>
 				
 			</div>
 			</section>
 
-
-<!--
-	what we do
-	- pretty straight forward
-	- just i guess controlling the width?
--->			
+		
 			<section class="whatWeDo">
 			<div class="sectInner">
 				
@@ -113,89 +107,63 @@ other
 			</div>
 			</section>
 
-<!--
-	calling all super heros
-	- again pretty simple
-	- just watch how you handle the button
--->			
+		
 			<section class="careers">
 			<div class="sectInner">
 
 				<h2>Call for <em>Superheroes</em></h2>
 				
-				<a href=https://goo.gl/6GTq58>See Our Openings</a>
+				<a href=https://goo.gl/6GTq58 class="button">See Our Openings</a>
 
 			</div>
 			</section>
 
-
-<!--
-	video
-	- got this pretty well covered i think
-	- well, note that the background is grey-ish, not white
--->			
+		
 			<section class="video">
 			<div class="sectInner">
 
-				<div class="video embedWrapper">
+				<div class="embedWrapper">
 					<iframe src="https://player.vimeo.com/video/53120092" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					<p><a href="https://vimeo.com/53120092">Astounding Tales of Interactivity</a> from <a href="https://vimeo.com/meltmedia">meltmedia</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 				</div>
 
 			</div>
 			</section>
-
-<!--
-	get in touch
-	- this'll be troublesome
-	- the map
-		- i guess, yeah, just do it as an image instead of an embed
-		- though link it to the google map?
-		- also watch how it stretches full width
-			- its not a background
-			- so it'll need to sit outside the .sectInner
-		- then play with the positioning of "get in touch"
-			- below on mobile
-			- over the top on larger screens
-			- woould flexbox be necessary for this?
-		- social media icons
-			- need to set up the markup for that
-			- anything special for hovers?  (if they are bg's you can't change color)
--->			
+		
 			<section class="getInTouch">
-			<div class="sectInner">
 			
 				<div class="map">
-					<img src="img/map.png" style="width:100%;">
+					<a href="http://goo.gl/maps/BvAH"><img src="img/map.png" alt="Map to meltmedia"></a>
 				</div>
 				
 				<div class="contactInfo">
-					<h3>Get in <em>Touch</em></h3>
-					
-					<b>Address:</b>
-					1255 W Rio Salado Pkwy 
-					Suite 209 
-					Tempe, AZ 85281
-					
-					<b>Phone:</b>
-					602-340-9440
-					
-					<b>Lets be friends:</b>
-
-			</div>
+					<div>
+						<h3>Get in <em>Touch</em></h3>
+						
+						<b>Address:</b><br>
+							<address>
+								<a href="http://goo.gl/maps/BvAH">
+									1255 W Rio Salado Pkwy <br>
+									Suite 209 <br>
+									Tempe, AZ 85281<br>
+								</a>
+							</address>
+						
+						<b>Phone:</b><br>
+							<a href="tel:1-602-340-9440">602-340-9440</a><br>
+						
+						<b>Lets be friends:</b><br>
+							<ul class="socMedia">
+								<li><a href="https://www.facebook.com/meltmediausa" class="socMedia-fb">Facebook</a></li>
+								<li><a href="http://twitter.com/meltmedia" class="socMedia-twit">Twitter</a></li>
+								<li><a href="http://www.linkedin.com/company/118686" class="socMedia-linkd">LinkedIn</a></li>
+								<li><a href="http://flickr.com/meltmedia" class="socMedia-insta">Instagram</a></li>
+							</ul>
+					</div>
+				</div>
 			</section>
 
-
-<!--
-	contact
-	- so forms are never any fun
-	- might wanna pull the placeholder text above (you know usability, damn it)
-	- then think about alternate place holder text?
-	- might wanna think about the visual separation of this from the above....
-	- might need the from as a list to help control sizes and placement and such
-	- also.... treatment of the button
-		- will the same css (a mixin/variable) work on a submit button as it will on a link?
--->			
+		
 			<section class="contact">
 			<div class="sectInner">
 
@@ -206,11 +174,27 @@ other
 				</p>
 				
 				<form>
-					<input type="text" name="xxx" placeholder="What is your name?">
-					<input type="email" name="xxx" placeholder="What is your email address?">
-					<input type="text" name="xxx" placeholder="What is your superpower?">
-					<input type="text" name="xxx" placeholder="What is your mission?">
-					<input type="submit" name="xxx" value="Send Message">
+					<ul>
+						<li class="name">
+							<label for="name">What is your name?</label>
+							<input type="text" name="name" placeholder="Ex: Aquaman">
+						</li>
+						<li class="email">
+							<label for="email">What is your email address?</label>
+							<input type="email" name="email" placeholder="Ex: arthur.curry@atlantis.gov">
+						</li>
+						<li class="superpower">
+							<label for="superpower">What is your superpower?</label>
+							<input type="text" name="superpower" placeholder="Ex: um.... aqua stuff?">
+						</li>
+						<li class="mission">
+							<label for="mission">What is your mission?</label>
+							<textarea name="mission" placeholder="Ex: Holy Harpoons! To free the seas of evil!"></textarea>
+						</li>
+						<li class="submit">
+							<button class="button">Send Message</button>
+						</li>
+					</ul>
 				</form>
 			</div>
 			</section>

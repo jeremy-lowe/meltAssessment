@@ -1,28 +1,16 @@
-/* global */
+
+/* GLOBAL */
 	body {
 		font: {
 			family: $font-base;
 			weight:400;
-			size: 20px;
 			margin:0; padding:0;
 		}
-		line-height: 1.7;
 		text-align: center;
 		background:#fff;
 		color: $grey-dark;
-		// don't forget to remove
-			@include mediaQ(small) {
-				background:pink;
-			}
-			@include mediaQ(medium) {
-				background: coral;
-			}
-			@include mediaQ(large) {
-				background: orange;
-			}
 	}
 	
-	// default link styles
 	a {color:$meltBlue;}
 	a:hover, a:visited {color:$grey;}
 	
@@ -31,11 +19,30 @@
 			family: $font-special;
 			weight:300;
 		}
-		color: $grey-dark;
+		line-height: 1.2;
+		margin:0.5em auto;
 	}
 	h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {font-weight: 700;}
-	h2 {font-size:44px;}
-	h3 {font-size:31px;}
+	
+	img {
+		width:100%; height: auto;
+	}
+	
+	.button {
+		display:block;
+		background:rgba(255,255,255,0);
+		border:2px solid $white;
+		color:$white;
+		text-decoration: none;
+		margin:1em auto;
+		padding:0.5em;
+		width: 200px;
+		transition:all 0.3s ease-out;
+		&:hover {
+			background:fade-out($grey-dark, 0.6);
+			color:$white;
+		}
+	}
 	
 	header, footer, section {
 		width:100%;
@@ -43,20 +50,9 @@
 	
 	.sectInner {
 		margin: 0 auto;
-		padding: 0.5em 0;
 		width:95%;
-		@extend %clearfix; // ............. you don't actually need this
 		@include mediaQ(small) {
 			width:90%;
-			//max-width: 960px;
-			outline:1px solid green;
-		}
-		@include mediaQ(medium) {
-			//width:85%;
-			//max-width: 1000px;
-		}
-		@include mediaQ(large) {
-			//width:80%;
 			max-width: 1200px;
 		}
 	}

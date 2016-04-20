@@ -1,17 +1,19 @@
 
-/* header */
+/* HEADER */
 	header {
 		background:$grey-light;
 		border-bottom:1px solid $grey;
+		z-index:1;
 		@include mediaQ(small) {
 			position:absolute;
 			top:0;
-			background:rgba(255,0,0,0.5);
+			background:none;
 			border-bottom:none;
 			& .sectInner {
 				display:flex;
 				justify-content: center;
 				align-items: center;
+				padding:0.5em 0;
 			}
 		}
 	}
@@ -35,24 +37,33 @@
 				width:auto;
 				fill:$white;
 				vertical-align: middle;
-				transition: all 0.3s ease-out;
+				transition: all 0.2s ease-out;
 			}
 			&:hover #meltLogo {
-				fill:$meltBlue;
+				fill: adjust-color($meltBlue, $saturation: -5%, $lightness: 15% );
 			}
 			h1 {
 				display:inline-block;
+				font-size:25px;
 				height:40px; line-height: 40px;
+				color:$grey-light;
+				margin:0;
 				width:0; overflow: hidden;
 				vertical-align: middle;
 				text-align: left;
-				color:$meltBlue;
+				text-shadow:-1px 1px 1px $grey-dark;
 				opacity:0;
-				transition: all 0.5s ease-out;
-							}
+				transition: all 0.4s ease-out;
+				font-weight: 300;
+				b {
+					font-weight: 400;
+					font-style: italic;
+				}
+			}
 			&:hover h1 {
+				color: adjust-color($meltBlue, $saturation: 5%, $lightness: 20% );
 				opacity:1;
-				width:120px;
+				width:125px;
 			}
 		}
 	}
@@ -70,9 +81,9 @@
 			text-decoration: none;
 			font-family: $font-special;
 			font-size: 12px;
-			transition: all 0.3s ease-out;
+			transition: all 0.2s ease-out;
 			&:hover {
-				color:$meltBlue;
+				color: adjust-color($meltBlue, $saturation: 5%, $lightness: 15% );
 			}
 			&.current {
 				padding-bottom:3px;
@@ -87,8 +98,8 @@
 			}
 			& li {
 				display: inline-block;
-				margin:0 10px;
-				&:last-of-type {margin:0 0 0 10px;}
+				margin:0 15px;
+				&:last-of-type {margin:0 0 0 15px;}
 			}
 			& a {
 				font-size:13px;
@@ -102,15 +113,21 @@
 	}
 	
 	
-/* footer */
+/* FOOTER */
 	footer {
 		background: $meltBlue;
 		font-family: $font-special;
 		font-size: 16px;
 		font-weight: 100;
 		color:$white;
-		padding:2em;
+		padding:2em 0;
 		b {
 			font-weight: 600; // why would i have to do that?
+		}
+		.sectInner {
+			max-width: 275px;
+			@include mediaQ(special, 450px) {
+				max-width: 960px;	
+			}
 		}
 	}

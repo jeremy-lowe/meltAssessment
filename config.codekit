@@ -2,6 +2,17 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19115",
 "files": {
+	"\/img\/bgCareers-sm.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26478,
+		"inputAbbreviatedPath": "\/img\/bgCareers-sm.jpg",
+		"outputAbbreviatedPath": "\/img\/bgCareers-sm.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/bgCareers.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -9,6 +20,17 @@
 		"initialSize": 49511,
 		"inputAbbreviatedPath": "\/img\/bgCareers.jpg",
 		"outputAbbreviatedPath": "\/img\/bgCareers.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/bgHero-sm.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 52704,
+		"inputAbbreviatedPath": "\/img\/bgHero-sm.jpg",
+		"outputAbbreviatedPath": "\/img\/bgHero-sm.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -24,6 +46,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/favicon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1501,
+		"inputAbbreviatedPath": "\/img\/favicon.png",
+		"outputAbbreviatedPath": "\/img\/favicon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/map-sm.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 68123,
+		"inputAbbreviatedPath": "\/img\/map-sm.png",
+		"outputAbbreviatedPath": "\/img\/map-sm.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/map.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -35,24 +79,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/workSample.jpg": {
-		"fileType": 16384,
+	"\/img\/workSamples-sm.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 84599,
-		"inputAbbreviatedPath": "\/img\/workSample.jpg",
-		"outputAbbreviatedPath": "\/img\/workSample.jpg",
+		"initialSize": 94090,
+		"inputAbbreviatedPath": "\/img\/workSamples-sm.png",
+		"outputAbbreviatedPath": "\/img\/workSamples-sm.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/workSamplesTest.png": {
+	"\/img\/workSamples.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 319789,
-		"inputAbbreviatedPath": "\/img\/workSamplesTest.png",
-		"outputAbbreviatedPath": "\/img\/workSamplesTest.png",
+		"inputAbbreviatedPath": "\/img\/workSamples.png",
+		"outputAbbreviatedPath": "\/img\/workSamples.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -144,6 +188,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scss\/_sections.scss",
 		"outputAbbreviatedPath": "\/css\/_sections.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/scss\/_typography.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/_typography.scss",
+		"outputAbbreviatedPath": "\/css\/_typography.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
